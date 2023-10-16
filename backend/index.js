@@ -4,13 +4,14 @@ require('dotenv').config();
 const Port = process.env.PORT || 4000;
 const cors = require('cors');
 
-const corsOptions = {
-  origin: 'https://frontend-nine-iota.vercel.app', // Replace with your frontend origin
-  methods: 'GET,POST,PUT,DELETE',
-  optionsSuccessStatus: 204, // Some legacy browsers (IE11) choke on 204
-};
-
-app.use(cors(corsOptions));
+cconst corsOptions = {
+    origin: 'https://frontend-nine-iota.vercel.app',
+    methods: 'GET,POST,PUT,DELETE',
+    optionsSuccessStatus: 204,
+  };
+  
+  app.use(cors(corsOptions));
+  
 
 app.listen(Port, () => {
   console.log("Listening At Port", Port);
