@@ -4,7 +4,7 @@ require('dotenv').config();
 const Port = process.env.PORT || 4000;
 const cors = require('cors');
 
-cconst corsOptions = {
+const corsOptions = {
     origin: 'https://frontend-nine-iota.vercel.app',
     methods: 'GET,POST,PUT,DELETE',
     optionsSuccessStatus: 204,
