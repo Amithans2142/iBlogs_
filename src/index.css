@@ -1,0 +1,516 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.postedby{
+  color: black;
+  font-style: italic;
+  font-size: small;
+}
+
+
+.card-title{
+  color: black;
+  font:  bold;
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+.card-text{
+  
+}
+
+.custom-loader {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #dbdcef;
+  border-right-color: #474bff;
+  animation: spinner-d3wgkg 1s infinite linear;
+
+
+
+  
+
+
+  
+
+}
+
+
+  
+
+@keyframes spinner-d3wgkg {
+  to {
+     transform: rotate(1turn);
+  }
+}
+
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% viewport height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  z-index: 999; /* Ensure it's on top of other content */
+}
+
+
+.navbar{
+  
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #3a5564;
+  color: white;
+ 
+  z-index: 100 ;
+  
+  
+ 
+  
+  
+ 
+}
+.navbar-container{
+  background-color: #3a5564;
+
+}
+.nav-items {
+  display: flex;
+  justify-items: center;
+  color: white;
+}
+
+
+
+.home{
+  margin: auto;
+width:   55%;
+  border: 3px;
+  padding: 10px;
+margin-top:0 ;
+background-color: #aebac1;
+border-radius: 12px;
+border-bottom-right-radius: 0%;
+/* margin-bottom: 273px; */
+
+
+  
+}
+.noteitem{
+  margin: auto;
+  width: 55%;
+  border: 3px;
+  padding: 10px;
+  background-color: white;
+  background-color: #f0f2f5;
+  margin-top: 30px;
+  border-radius: 12px;
+  border-bottom-right-radius: 0%;
+
+}
+
+.body{
+  font-size: medium;
+}
+
+.prev{
+  width: 80px;
+  border-radius: 6px;
+  padding: 0.25rem;
+  background-color: #f0f2f5;
+}
+
+.next{
+    width: 80px;
+    border-radius: 6px;
+    padding: 0.25rem;
+  
+}
+
+/* .pagination{
+  display: flex;
+  gap: 2px;
+
+} */
+
+.page{
+  display: flex;
+  justify-content: center;
+  gap: 400px;
+  margin-bottom: 15px;
+  
+  
+  background-color: grey;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+ 
+  z-index: 100 ;
+
+  
+  
+
+  
+}
+
+
+.pagination-container {
+  position: sticky;
+  bottom: 0px; /* Adjust the distance from the bottom as needed */
+  background-color: white; /* Background color for the sticky pagination */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+  z-index: 1; /* Ensure the pagination stays on top of content */
+  background-color: #3a5564;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-top: 12px;
+ height: 50px;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.prev,
+.next {
+  padding: 5px 10px;
+  background-color: #f0f2f5;
+  color: #3a5564;
+   
+  cursor: pointer;
+  
+  border-top-left-radius: 12px ;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: white;
+}
+
+span {
+  font-size: 14px;
+}
+
+.navbar-container {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Background color for the sticky navbar */
+  padding: 0px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+  z-index: 100; /* Ensure the navbar stays on top of content */
+  background-color: #3a5564;
+  margin-bottom: 12px;
+  background-color: #3a5564;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #3a5564;
+  
+ 
+}
+
+.navbar-nav{
+  gap: 230px;
+  
+}
+.nav-items{
+  gap: 100px;
+}
+/* Add your custom styles for the navbar elements here */
+.spanUser{
+  font-style: italic;
+}
+.card-text{
+  font-style: italic;
+  color: black;
+  font-size: small;
+  
+}
+.comment{
+  display:flex;
+  flex-direction: row;
+}
+
+.addBtn{
+  color: black;
+  
+  background-color: white;
+  width: 80px;
+  border-radius:  6px ;
+  padding: 0.25rem;
+  border:2px solid black;
+  border-bottom-right-radius: 0%;
+}
+.addBtn:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.comment-container {
+  width: 50%;
+  height: 50%;
+  background-color: aqua;
+  height: 100%;
+}
+.dropdown{
+  width: 100%;
+ 
+  
+}
+
+.drop{
+  width: 80%;
+  height: 100%;
+}
+
+.tutu{
+  width: 65%;
+}
+
+.wrapper{
+ background-color: #d1d7db;;
+
+ 
+}
+.card-body{
+  background-color: white;
+  margin: 0%;
+  padding: 10px;
+  border-radius: 12px;
+  border-bottom-right-radius: 0%;
+  
+}
+.nav-link{
+  color: white;
+}
+.navbar-brand{
+  color: white;
+}
+
+#root{
+  border-radius: 0%;
+  background-color: #d1d7db;
+  
+}
+
+.italic-placeholder::placeholder {
+  font-style: italic;
+  
+}
+.form-label{
+  font: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.user-card{
+  margin: auto;
+  width:   85%;
+    border: 3px;
+    padding: 10px;
+  margin-top:0 ;
+  background-color: #f0f2f5;
+  border-radius: 12px;
+  border-bottom-right-radius: 0%;
+  
+}
+.user-wrapper{
+  background-color: #d1d7db;
+}
+
+.account-item{
+  margin: auto;
+  width: 70%;
+  border: 3px;
+  padding: 10px;
+  background-color: white;
+  background-color: #f0f2f5;
+  margin-top: 30px;
+  border-radius: 12px;
+  border-bottom-right-radius: 0%;
+  margin-top: 12px;
+}
+
+.account-body{
+  background-color: white;
+  margin: 0%;
+  padding: 10px;
+  border-radius: 12px;
+  border-bottom-right-radius: 0%;
+  
+  
+}
+.pagination-container1{
+  position: sticky;
+  bottom: 0px; /* Adjust the distance from the bottom as needed */
+  background-color: white; /* Background color for the sticky pagination */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+  z-index: 1; /* Ensure the pagination stays on top of content */
+  background-color: #3a5564;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-top: 30px;
+
+ height: 50px;
+ 
+}
+.userinfo{
+  
+  font: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading{
+  
+  font: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 90px;
+  margin-top: 20px;
+  font-size:larger;
+}
+.btnGap{
+  gap: 245px;
+}
+
+.not-posted{
+  
+  text-align: center;
+  font: bold;
+  font-size:larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 304px;
+  
+}
+
+.note{
+  margin-bottom: 400px;
+}
+
+
+.not-posted1{
+  
+  text-align: center;
+  font: bold;
+  font-size:larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 261px;
+  
+}
+
+
+.login{
+    height: 543px;
+}
+.login-form{
+
+  margin: auto;
+  width:   55%;
+    border: 3px;
+    padding: 10px;
+  margin-top:0 ;
+  background-color: #aebac1;
+  border-radius: 12px;
+
+  border-bottom-right-radius: 0%;
+
+  
+  
+}
+
+.signup{
+  height: 543px;
+
+}
+
+.error-message{
+  color: red;
+}
+
+.signup-form{
+
+  margin: auto;
+  width:   55%;
+    border: 3px;
+    padding: 10px;
+  margin-top:0 ;
+  background-color: #aebac1;
+  border-radius: 12px;
+
+  border-bottom-right-radius: 0%;
+
+  
+  
+}
+.heading-signup{
+
+  font: bold;
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+ 
+  margin-left: 255px;
+  margin-top: 20px;
+  font-size:2rem;
+color: #3a5564;
+}
+
+.form-name{
+  font: bold;
+}
+
+
+.form-password{
+  margin-bottom: 12px;
+}
+
+
+.account-height{
+height: auto;
+  
+
+}
+
+.modal-footer{
+  gap:20px
+}
+
+.addBtnU{
+
+  color: black;
+  
+  background-color: white;
+  width: 80px;
+  border-radius:  6px ;
+  padding: 0.25rem;
+  border:2px solid black;
+  border-bottom-right-radius: 0%;
+  width: 25%;
+
+}
