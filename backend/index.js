@@ -6,8 +6,15 @@ const cors = require('cors');
 const corsOptions = require('./config/corsOptions')
 
 
+app.use(cors({
+    origin: 'https://iblogs-yvfo.onrender.com',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,  // If you need to pass cookies in requests
+  }));
   
-  app.use(cors(corsOptions));
+
+  
+//   app.use(cors(corsOptions));
   
 
 
