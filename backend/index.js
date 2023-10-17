@@ -3,12 +3,9 @@ const app = express();
 require('dotenv').config();
 const Port = process.env.PORT || 4000;
 const cors = require('cors');
+const corsOptions = require('./config/corsOptions')
 
-const corsOptions = {
-    origin: ['https://frontend-nine-iota.vercel.app', 'https://i-blogs-4rymjotxv-amit-hans-projects.vercel.app'],
-    methods: 'GET, POST, PUT, DELETE',
-    optionsSuccessStatus: 204,
-  };
+
   
   app.use(cors(corsOptions));
   
