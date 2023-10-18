@@ -391,12 +391,19 @@ span {
   color: white;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  margin-top: 30px;
+  margin-top: 72px;
 
  height: 50px;
  width: 1348px;
  
 }
+
+@media (max-width: 768px) {
+  .pagination-container1 {
+    margin-top: 20px; /* Adjust the margin-top value as needed */
+  }
+}
+
 .userinfo{
   
   font: bold;
