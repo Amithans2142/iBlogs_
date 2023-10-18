@@ -196,7 +196,7 @@ border-bottom-right-radius: 0%;
 
 @media (max-width: 767px) {
   .pagination-container {
-    margin-top: 370px;/* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
+    margin-top: 178px;/* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
   }
 }
 
@@ -315,7 +315,7 @@ span {
 
 @media (max-width: 767px) {
   .wrapper {
-    height:120vh; /* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
+    height:65vh; /* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
   }
 }
 .card-body{
@@ -336,6 +336,7 @@ span {
 #root{
   border-radius: 0%;
   background-color: #d1d7db;
+  height: 867px;
   
 }
 
@@ -570,3 +571,6 @@ align-items: center;
 
 }
 
+.xxx{
+  height: 400px;
+}
