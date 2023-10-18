@@ -79,7 +79,7 @@ const Pagination = () => {
   const slicedPosts = getPostsForPage(currentPage);
 
   return (
-    <div>
+    <div className="xxx">
       {slicedPosts.length > 0 ? (
         slicedPosts.map((post) => (
           <Card
