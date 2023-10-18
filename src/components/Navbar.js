@@ -47,7 +47,7 @@ const Navbar = () => {
 
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}>
           <ul className="navbar-nav mx-auto"> {/* Center the menu links */}
-            <li className="nav-item">
+            <li className="nav-item-home">
               {loading ? (
                 <Spinner />
               ) : (

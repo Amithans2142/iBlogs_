@@ -392,6 +392,7 @@ span {
   margin-top: 30px;
 
  height: 50px;
+ width: 1348px;
  
 }
 .userinfo{
@@ -443,11 +444,17 @@ span {
 
 
 .login{
-    height: 777px;
+    height: 543px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+}
+
+@media (max-width: 767px) {
+  .login {
+    height: 92vh; /* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
+  }
 }
 .login-form{
 
@@ -542,5 +549,10 @@ align-items: center;
   border:2px solid black;
   border-bottom-right-radius: 0%;
   width: 25%;
+
+}
+
+.nav-item-home{
+  margin-left: 40px;
 
 }
