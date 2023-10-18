@@ -4,7 +4,7 @@ import Spinner from "./Spinner";
 
 const Navbar = () => {
   const [loading, setLoading] = useState(false);
-  const [isNavOpen, setNavOpen] = useState(false); // New state for mobile navigation
+  const [isNavOpen, setNavOpen] = useState(false);
 
   let navigate = useNavigate();
 
@@ -25,9 +25,18 @@ const Navbar = () => {
     setNavOpen(false);
   };
 
+  const linkStyle = {
+    padding: "0.5rem",
+    fontSize: "1rem",
+    marginRight: "150px", // Add margin to links
+  };
+
   return (
     <div className="navbar-container">
-      <nav className="navbar navbar-expand-sm container">
+      <nav className="navbar navbar-expand-md container">
+        <Link to="/home" className="navbar-brand">
+          iBlogs
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -37,12 +46,17 @@ const Navbar = () => {
         </button>
 
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}>
-          <ul className="navbar-nav">
+          <ul className="navbar-nav mx-auto"> {/* Center the menu links */}
             <li className="nav-item">
               {loading ? (
                 <Spinner />
               ) : (
-                <Link to="/home" className="nav-link" onClick={closeNav}>
+                <Link
+                  to="/home"
+                  className="nav-link"
+                  onClick={closeNav}
+                  style={linkStyle}
+                >
                   Home
                 </Link>
               )}
@@ -51,7 +65,12 @@ const Navbar = () => {
               {loading ? (
                 <Spinner />
               ) : (
-                <Link to="/account" className="nav-link" onClick={closeNav}>
+                <Link
+                  to="/account"
+                  className="nav-link"
+                  onClick={closeNav}
+                  style={linkStyle}
+                >
                   Account
                 </Link>
               )}
@@ -63,7 +82,12 @@ const Navbar = () => {
                   {loading ? (
                     <Spinner />
                   ) : (
-                    <Link to="/login" className="nav-link" onClick={closeNav}>
+                    <Link
+                      to="/login"
+                      className="nav-link"
+                      onClick={closeNav}
+                      style={linkStyle}
+                    >
                       Login
                     </Link>
                   )}
@@ -72,7 +96,12 @@ const Navbar = () => {
                   {loading ? (
                     <Spinner />
                   ) : (
-                    <Link to="/signup" className="nav-link" onClick={closeNav}>
+                    <Link
+                      to="/signup"
+                      className="nav-link"
+                      onClick={closeNav}
+                      style={linkStyle}
+                    >
                       Signup
                     </Link>
                   )}
@@ -80,7 +109,12 @@ const Navbar = () => {
               </div>
             ) : (
               <li className="nav-item">
-                <Link to="/login" className="nav-link" onClick={handleLogout}>
+                <Link
+                  to="/login"
+                  className="nav-link"
+                  onClick={handleLogout}
+                  style={linkStyle}
+                >
                   Logout
                 </Link>
               </li>

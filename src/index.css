@@ -242,7 +242,7 @@ span {
 }
 
 .navbar-nav{
-  gap: 230px;
+  
   
 }
 .nav-items{
@@ -443,7 +443,7 @@ span {
 
 
 .login{
-    height: 543px;
+    height: 777px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -452,7 +452,7 @@ span {
 .login-form{
 
   margin: auto;
-  width:   55%;
+  width:   85%;
     border: 3px;
     padding: 10px;
   margin-top:0 ;
@@ -466,7 +466,7 @@ span {
 }
 
 .signup{
-  height: 543px;
+  height: 777px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -481,7 +481,7 @@ span {
 .signup-form{
 
   margin: auto;
-  width:   55%;
+  width:   85%;
     border: 3px;
     padding: 10px;
   margin-top:0 ;
