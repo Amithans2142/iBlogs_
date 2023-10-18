@@ -196,7 +196,7 @@ border-bottom-right-radius: 0%;
 
 @media (max-width: 767px) {
   .pagination-container {
-    margin-top: 315px;/* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
+    margin-top: 288px;/* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
   }
 }
 
