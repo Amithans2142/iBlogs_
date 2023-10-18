@@ -79,7 +79,7 @@ const AccountPagination = () => {
   }, [currentPage, totalPages, navigate]);
 
   return (
-    <div className="container">
+    <div>
       {sortedPosts.length === 0 ? (
         <p style={{
           textAlign: 'center',
