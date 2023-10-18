@@ -10,7 +10,7 @@ const Card = ({ post }) => {
     const context = useContext(PostContext);
     const { deletePost, posts, getAllData, getAllDataHome, editPost, addComment, userId, userName, loading, setLoading } = context;
     const [comment, setComment] = useState({ comment: "" })
-    const host = "http://localhost:4000";
+    const host = "https://iblogs-backend.onrender.com";
 
 
 

@@ -15,7 +15,7 @@ const CardAccount = ({ post }) => {
   const { deletePost, getAllData, addComment, userId,editPost,userName, getUserInfo, userInfo, loading, setLoading } = context;
   const [comment, setComment] = useState({ comment: "" });
 
-  const host = "http://localhost:4000";
+  const host = "https://iblogs-backend.onrender.com";
 
   // Create a separate state for each post being edited
   const [editedPosts, setEditedPosts] = useState({});

@@ -8,7 +8,7 @@ const Account = () => {
   let navigate = useNavigate();
   const context = useContext(PostContext);
   const { posts, getAllData, editPost, addComment, userId, getUserInfo, userInfo, loading, setLoading } = context;
-  const host = "http://localhost:4000";
+  const host = "https://iblogs-backend.onrender.com";
 
 
   useEffect(() => {
