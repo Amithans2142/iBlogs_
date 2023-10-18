@@ -79,7 +79,7 @@ const Pagination = () => {
   const slicedPosts = getPostsForPage(currentPage);
 
   return (
-    <div className="xxx">
+    <div className="pagination-container">
       {slicedPosts.length > 0 ? (
         slicedPosts.map((post) => (
           <Card
@@ -93,23 +93,21 @@ const Pagination = () => {
         </div>
       )}
 
-      <div className="pagination-container">
-        <div className="pagination">
-          {currentPage > 1 && (
-            <button className="prev" onClick={handlePrevPage}>
-              Previous
-            </button>
-          )}
+      <div className="pagination">
+        {currentPage > 1 && (
+          <button className="prev" onClick={handlePrevPage}>
+            Previous
+          </button>
+        )}
 
-          {currentPage < totalPages && hasPostsForNextPage() && (
-            <button className="next" onClick={handleNextPage}>
-              Next
-            </button>
-          )}
-        </div>
-        <div>
-          <span>Page {currentPage} of {totalPages}</span>
-        </div>
+        {currentPage < totalPages && hasPostsForNextPage() && (
+          <button className="next" onClick={handleNextPage}>
+            Next
+          </button>
+        )}
+      </div>
+      <div>
+        <span>Page {currentPage} of {totalPages}</span>
       </div>
     </div>
   );
