@@ -374,6 +374,7 @@ span {
   padding: 10px;
   border-radius: 12px;
   border-bottom-right-radius: 0%;
+  width: 100%;
   
   
 }
@@ -391,7 +392,7 @@ span {
   color: white;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  margin-top: 72px;
+  margin-top: 73px;
 
  height: 50px;
  width: 1348px;
