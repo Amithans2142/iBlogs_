@@ -429,6 +429,10 @@ span {
 
 .login{
     height: 543px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 .login-form{
 
@@ -475,10 +479,13 @@ span {
   font: bold;
   /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
  
-  margin-left: 255px;
+  margin-left: 0px;
   margin-top: 20px;
   font-size:2rem;
 color: #3a5564;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .form-name{
