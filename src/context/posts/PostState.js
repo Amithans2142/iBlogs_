@@ -2,7 +2,7 @@ import PostContext from "./PostContext";
 import { useState} from "react";
 
 const PostState = (props) => {
-  const host = "http://localhost:4000";
+  const host = "https://iblogs-backend.onrender.com";
   const [posts, setPosts] = useState([]);
   const [userName, setUserName] = useState('')
   const [userId, setUserId] = useState('')
