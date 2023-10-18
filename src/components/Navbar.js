@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Spinner from "./Spinner";
+
 const Navbar = () => {
   const [loading, setLoading] = useState(false);
+  const [isNavOpen, setNavOpen] = useState(false); // New state for mobile navigation
+
   let navigate = useNavigate();
 
   const handleLogout = () => {
@@ -14,109 +17,75 @@ const Navbar = () => {
     }, 1000);
   };
 
-
-  const redirectToFirstPage = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      navigate("home/?page1");
-    }, 500);
+  const toggleNav = () => {
+    setNavOpen(!isNavOpen);
   };
 
-
-  const redirectToAccount = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      navigate("/account");
-    }, 500);
+  const closeNav = () => {
+    setNavOpen(false);
   };
 
   return (
     <div className="navbar-container">
-      <nav className="navbar navbar-expand-lg d-flex container">
-        <div className="nav-items mx-auto">
-          {loading ? (
-            <Spinner />
-          ) : (
-            <Link to="/home" className="navbar-brand" onClick={redirectToFirstPage}>
-              iBlogs
-            </Link>
-          )}
+      <nav className="navbar navbar-expand-lg container">
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleNav}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          {loading ? (
-            <Spinner />
-          ) : (
-            <>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
+        <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}>
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              {loading ? (
+                <Spinner />
+              ) : (
+                <Link to="/home" className="nav-link" onClick={closeNav}>
+                  Home
+                </Link>
+              )}
+            </li>
+            <li className="nav-item">
+              {loading ? (
+                <Spinner />
+              ) : (
+                <Link to="/account" className="nav-link" onClick={closeNav}>
+                  Account
+                </Link>
+              )}
+            </li>
 
-              <div
-                className="collapse navbar-collapse"
-                id="navbarSupportedContent"
-              >
-                <ul className="navbar-nav mr-auto d-flex">
-                  <li className="nav-item active">
-
-                    <Link
-                      className="nav-link"
-                      to="/home"
-                      onClick={redirectToFirstPage}
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li className="nav-item active">
-                    <Link className="nav-link" to="/account" onClick={redirectToAccount}>
-                      Account
-                    </Link>
-                  </li>
-
-                  {!localStorage.getItem("token") ? (
-                    <div className="navbar-nav mr-auto d-flex">
-                      <li className="nav-item">
-                        {loading ? (
-                          <Spinner />
-                        ) : (
-                          <Link className="nav-link" to="/login">
-                            Login
-                          </Link>
-                        )}
-                      </li>
-                      <li className="nav-item">
-                        {loading ? (
-                          <Spinner />
-                        ) : (
-                          <Link className="nav-link" to="/signup">
-                            Signup
-                          </Link>
-                        )}
-                      </li>
-                    </div>
+            {!localStorage.getItem("token") ? (
+              <div className="navbar-nav">
+                <li className="nav-item">
+                  {loading ? (
+                    <Spinner />
                   ) : (
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link"
-                        to="/login"
-                        onClick={handleLogout}
-                      >
-                        Logout
-                      </Link>
-                    </li>
+                    <Link to="/login" className="nav-link" onClick={closeNav}>
+                      Login
+                    </Link>
                   )}
-                </ul>
+                </li>
+                <li className="nav-item">
+                  {loading ? (
+                    <Spinner />
+                  ) : (
+                    <Link to="/signup" className="nav-link" onClick={closeNav}>
+                      Signup
+                    </Link>
+                  )}
+                </li>
               </div>
-            </>
-          )}
+            ) : (
+              <li className="nav-item">
+                <Link to="/login" className="nav-link" onClick={handleLogout}>
+                  Logout
+                </Link>
+              </li>
+            )}
+          </ul>
         </div>
       </nav>
     </div>
