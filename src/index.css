@@ -194,13 +194,6 @@ border-bottom-right-radius: 0%;
  height: 50px;
 }
 
-@media (max-width: 767px) {
-  .pagination-container {
-    margin-top: 327px;/* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
-  }
-}
-
-
 .pagination {
   display: flex;
   gap: 10px;
@@ -307,17 +300,13 @@ span {
 }
 
 .wrapper{
- background-color: #d1d7db;
- height: 625px;
+ background-color: #d1d7db;;
+ 
 
  
 }
 
-@media (max-width: 767px) {
-  .wrapper {
-    height:111vh; /* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
-  }
-}
+
 .card-body{
   background-color: white;
   margin: 0%;
