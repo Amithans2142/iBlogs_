@@ -37,7 +37,7 @@ const Navbar = () => {
         </button>
 
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}>
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav">
             <li className="nav-item">
               {loading ? (
                 <Spinner />
