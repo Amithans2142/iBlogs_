@@ -11,8 +11,8 @@ export const Home = () => {
   const context = useContext(PostContext);
   const { addPost, getAllData, loading, setLoading } = context;
   const [post, setPost] = useState({ title: "", body: "" });
-  const [validationError, setValidationError] = useState({ title: "", body: "" }); // State for validation error messages
-  const [requiredError, setRequiredError] = useState({ title: "", body: "" }); // State for required field error messages
+  const [validationError, setValidationError] = useState({ title: "", body: "" });
+  const [requiredError, setRequiredError] = useState({ title: "", body: "" });
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -137,7 +137,8 @@ export const Home = () => {
           </Button>
         </Form>
       </div>
-      {loading ? (<Spinner />) : (<Pagination />)}
+      {loading ? (<Spinner />) : null}
+      <Pagination /> {/* Render Pagination here within the same 'wrapper' */}
     </div>
   );
 }
