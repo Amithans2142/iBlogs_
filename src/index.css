@@ -196,7 +196,7 @@ border-bottom-right-radius: 0%;
 
 @media (max-width: 767px) {
   .pagination-container {
-    margin-top: 327px;/* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
+    margin-top: 140px;/* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
   }
 }
 
@@ -315,7 +315,7 @@ span {
 
 @media (max-width: 767px) {
   .wrapper {
-    height:92vh; /* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
+    height:111vh; /* Set a fixed height for mobile devices, e.g., 100% of the viewport height */
   }
 }
 .card-body{
