@@ -79,7 +79,7 @@ const AccountPagination = () => {
   }, [currentPage, totalPages, navigate]);
 
   return (
-    <div>
+    <div className="container">
       {sortedPosts.length === 0 ? (
         <p style={{
           textAlign: 'center',
@@ -87,7 +87,7 @@ const AccountPagination = () => {
           fontSize: 'larger',
           fontFamily: 'Franklin Gothic Medium, Arial Narrow, Arial, sans-serif',
         }}>
-          No posts available
+         
         </p>
       ) : (
         <>
