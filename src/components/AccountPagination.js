@@ -100,7 +100,7 @@ const AccountPagination = () => {
         </>
       )}
 
-      <div className="pagination-container1">
+      <div className="pagination-container">
         <div className="pagination">
           {currentPage > 1 && (
             <button className="prev" onClick={handlePrevPage}>
