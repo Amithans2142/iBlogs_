@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <nav className="navbar navbar-expand-lg container">
+      <nav className="navbar navbar-expand-sm container">
         <button
           className="navbar-toggler"
           type="button"
