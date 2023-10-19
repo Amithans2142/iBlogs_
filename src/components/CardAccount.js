@@ -81,8 +81,16 @@ const CardAccount = ({ post }) => {
         <p className="postedby">Posted On: {post?.CreatedAt}</p>
         <p className="body">{post.body}</p>
         
-                                <p><span className="spanUser">{post.user}</span>__{post.comment}</p>
-
+        <div>
+                        <p className="card-text">Comments:</p>
+                        {post.comments.length === 0 ? <span style={{ color: 'grey', fontStyle: 'italic' }}>Not Available</span> : null}
+                        {post.comments?.slice().reverse().map((comment) => (
+                            <div key={comment._id}>
+                                <p><span className="spanUser">{comment.user}</span>__{comment.comment}</p>
+                                <p></p>
+                            </div>
+                        ))}
+                    </div>
                           
         
         {/* Display the comment form */}
