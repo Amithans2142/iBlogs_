@@ -9,7 +9,7 @@ import jwt_decode from "jwt-decode";
 
 export const Home = () => {
   const context = useContext(PostContext);
-  const { addPost, getAllData, loading, setLoading } = context;
+  const { addPost, getAllDataHome, loading, setLoading } = context;
   const [post, setPost] = useState({ title: "", body: "" });
   const [validationError, setValidationError] = useState({ title: "", body: "" });
   const [requiredError, setRequiredError] = useState({ title: "", body: "" });
@@ -25,6 +25,7 @@ export const Home = () => {
         // Decode the token to check expiration (You may need to install a JWT library for this)
         const decodedToken = jwt_decode(token);
         const currentTime = Date.now() / 1000;
+        get
 
         if (decodedToken.exp < currentTime) {
           // Token has expired, redirect to the login page
@@ -81,7 +82,7 @@ export const Home = () => {
       setLoading(true);
       await addPost(post);
       setPost({ title: "", body: "" });
-      await getAllData();
+      await getAllDataHome();
       setLoading(false);
     }
   }
