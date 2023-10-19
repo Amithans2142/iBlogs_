@@ -369,7 +369,7 @@ span {
 }
 @media (max-width: 768px) {
   .account-item {
-    margin-top: 165px; /* Adjust the margin-top value as needed */
+    margin-top: 0px; /* Adjust the margin-top value as needed */
     width: 80%;
   }
 }
