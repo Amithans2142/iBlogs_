@@ -82,7 +82,7 @@ const CardAccount = ({ post }) => {
         <p className="body">{post.body}</p>
         
                                 <p><span className="spanUser">{post.user}</span>__{post.comment}</p>
-                                <p></p>
+
                           
         
         {/* Display the comment form */}
