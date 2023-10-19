@@ -370,7 +370,7 @@ span {
 @media (max-width: 768px) {
   .account-item {
     margin-top: 165px; /* Adjust the margin-top value as needed */
-    width: 85%;
+    width: 80%;
   }
 }
 
