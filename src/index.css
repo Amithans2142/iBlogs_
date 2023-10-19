@@ -401,7 +401,8 @@ span {
 
 @media (max-width: 768px) {
   .pagination-container1 {
-    margin-top: 20px; /* Adjust the margin-top value as needed */
+    margin-top: 165px; /* Adjust the margin-top value as needed */
+    width: auto;
   }
 }
 
