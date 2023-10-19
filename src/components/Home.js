@@ -25,7 +25,6 @@ export const Home = () => {
         // Decode the token to check expiration (You may need to install a JWT library for this)
         const decodedToken = jwt_decode(token);
         const currentTime = Date.now() / 1000;
-        get
 
         if (decodedToken.exp < currentTime) {
           // Token has expired, redirect to the login page
