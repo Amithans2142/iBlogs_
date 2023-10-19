@@ -87,7 +87,7 @@ const AccountPagination = () => {
           fontSize: 'larger',
           fontFamily: 'Franklin Gothic Medium, Arial Narrow, Arial, sans-serif',
         }}>
-         
+
         </p>
       ) : (
         <>

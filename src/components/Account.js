@@ -42,7 +42,7 @@ const Account = () => {
   return (
 
     <div className="account-height">
-      <div className="">
+      <div className="container">
         <div className="user">
           {userInfo && (
             <div className="user-wrapper">
