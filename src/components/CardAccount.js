@@ -25,12 +25,12 @@ const CardAccount = ({ post }) => {
   const refClose = useRef(null);
 
   const handleComment = async (postId, userName) => {
-    console.log("button clicked");
-    console.log(comment);
+    // console.log("button clicked");
+    // console.log(comment);
     if (localStorage.getItem('token')) {
       setLoading(true);
       const b = await addComment(postId, userId, comment);
-      console.log(b);
+      // console.log(b);
       await getAllData();
       setLoading(false);
     } else {
@@ -60,7 +60,7 @@ const CardAccount = ({ post }) => {
 
   const handleClick = async (e, postId) => {
     e.preventDefault();
-    console.log('Updating Post', editedPosts[postId]);
+    // console.log('Updating Post', editedPosts[postId]);
     const editedPost = editedPosts[postId];
     await editPost(editedPost.id, editedPost.etitle, editedPost.ebody);
     refClose.current.click();

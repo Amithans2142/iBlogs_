@@ -16,12 +16,12 @@ const Card = ({ post }) => {
 
     const handleComment = async (postId, userName) => {
 
-        console.log("button clicked")
-        console.log(comment)
+        // console.log("button clicked")
+        // console.log(comment)
         if (localStorage.getItem('token')) {
 
             const b = await addComment(postId, userId, comment);
-            console.log(b);
+            // console.log(b);
 
             await getAllDataHome();
 

@@ -33,7 +33,7 @@ const PostState = (props) => {
       );
 
       const res = await getPost.json();
-      console.log(res);
+      // console.log(res);
 
       setPosts(res.data);
     } catch (error) {
@@ -62,7 +62,7 @@ const PostState = (props) => {
       );
 
       const res = await getPost.json();
-      console.log(res);
+      // console.log(res);
 
       setPosts(res.data);
     } catch (error) {
@@ -91,10 +91,10 @@ const PostState = (props) => {
       );
 
       const res = await getPost.json();
-      console.log(res);
+      // console.log(res);
 
       setUserInfo(res);
-      console.log("info", res);
+      // console.log("info", res);
     } catch (error) {
       console.log(error);
     }
@@ -119,7 +119,7 @@ const PostState = (props) => {
     });
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     if (response.ok) {
       return { status: "success", data };
@@ -129,7 +129,7 @@ const PostState = (props) => {
   }
 
   const addComment = async (postId, userName, comment) => {
-    console.log("data", postId, userName, comment)
+    // console.log("data", postId, userName, comment)
     try {
       const token = localStorage.getItem('token'); // Retrieve the token from localStorage
       if (!token) {
@@ -147,7 +147,7 @@ const PostState = (props) => {
       });
 
       const data = await response.json();
-      console.log("json", data);
+      // console.log("json", data);
 
       if (response.ok) {
         return { status: "success", data };
@@ -175,8 +175,8 @@ const PostState = (props) => {
         },
       });
       const json = response.json();
-      console.log(json);
-      console.log(`Deleted the post with ID: ${id}`);
+      // console.log(json);
+      // console.log(`Deleted the post with ID: ${id}`);
       const newPosts = posts.filter((post) => post._id !== id);
       setPosts(newPosts);
     } catch (error) {
@@ -194,7 +194,7 @@ const PostState = (props) => {
       body: JSON.stringify({ title, body })
     })
     const json = response.json();
-    console.log(json)
+    // console.log(json)
 
     for (let index = 0; index < posts.length; index++) {
       const element = posts[index];
@@ -219,7 +219,7 @@ const PostState = (props) => {
       );
 
       const res = await getData.json();
-      console.log(res);
+      // console.log(res);
 
       setPosts(res.data);
     } catch (error) {
